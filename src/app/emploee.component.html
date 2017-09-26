@@ -1,0 +1,21 @@
+<div style="width: 420px; padding: 16px" >
+  <h3>Employee of departmen {{currentDep.name}}</h3>
+  <div>
+    <table class="w3-table-all">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Salary</th>
+      </tr>
+      <tr *ngFor="let e of emploees">
+        <td *ngIf="e.departmentId==currentDep.id">{{e.firstName}}</td>
+        <td *ngIf="e.departmentId==currentDep.id">{{e.lastName}}</td>
+        <td *ngIf="e.departmentId==currentDep.id">{{e.phone}}</td>
+        <td *ngIf="e.departmentId==currentDep.id">{{e.salary}}</td>
+      </tr>
+    </table>
+  </div>
+  <br/>
+  <a routerLink="/departmen" routerLinkActive="active">Back to list of departmens</a>
+</div>
